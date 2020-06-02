@@ -5,7 +5,7 @@ export default function news(news:any = {}, action:Action) {
         case 'FETCH_NEWS_SUCCESS':
             return {
                 ...action.payload,
-                hits: (news.hits || []).concat(action.payload.hits)
+                hits: action.payload.hits
             };
         case 'FETCH_LATEST_NEWS_SUCCESS':
             return {
