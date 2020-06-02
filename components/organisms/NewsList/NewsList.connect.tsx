@@ -20,7 +20,7 @@ function mapStateToProps(state:any):NewsState {
     let hiddenNewsItems = [];
     let upvotedNewsItems = {};
 
-    if (global && global.localStorage) {
+    if (global?.localStorage) {
         hiddenNewsItems = JSON.parse(localStorage.getItem('hiddenNewsItems') || '[]');
         upvotedNewsItems = JSON.parse(localStorage.getItem('upvotedNewsItems') || '{}');
     }
@@ -37,7 +37,7 @@ function mapStateToProps(state:any):NewsState {
                 if (upvotedNewsItemsKeys.indexOf(item.objectID) > -1) {
                     return {
                         ...item,
-                        points: upvotedNewsItems[item.objectID].points
+                        points: upvotedNewsItems[item.objectID]._upvotes
                     };
                 }
 

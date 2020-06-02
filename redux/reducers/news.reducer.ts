@@ -25,7 +25,7 @@ export default function news(news:any = {}, action:Action) {
                     if (item.objectID === action.payload.id) {
                         return {
                             ...item,
-                            _upvotes: action.payload.upvotes
+                            points: action.payload.upvotes
                         };
                     }
 

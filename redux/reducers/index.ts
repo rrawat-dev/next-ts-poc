@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper'
 import news from './news.reducer';
-import fullpageLoader from './fullpageLoader.reducer';
+import fullPageLoader from './fullpageLoader.reducer';
 import {Action} from '../actions/news.actions';
 
 const combinedReducer = combineReducers({
     news,
-    fullpageLoader
+    fullPageLoader
 })
 
 

@@ -14,16 +14,6 @@ interface Props {
 const NewsList:React.FC<Props> = (props) => {
     const {news} = props;
 
-    // history back handler
-    useEffect(() => {
-        window.onpopstate = function(e){
-            if(e.state !== null) {
-                fetchNewsPage(e.state.page);
-            }
-        }
-    }, []);
-
-
     const hideNewsItem = (id:string) => {
         props.hideNewsItem(id);
     };

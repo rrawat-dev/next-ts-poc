@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next'
 
 export const getStaticProps:GetServerSideProps = wrapper.getServerSideProps(
     ({store}) => {
+        // @ts-ignore: Unreachable code error
         return store.dispatch(fetchNewsAsyncAction());
     }
 );

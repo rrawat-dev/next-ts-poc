@@ -44,7 +44,7 @@ export function upvoteNewsItemSuccessAction(id:string, upvotes:number):Action {
 }
 
 export function fetchNewsAsyncAction(options:any):Function {
-    return (dispatch):Promise<any> => {
+    return (dispatch) => {
         dispatch(showFullPageLoaderAction(true));
         return fetchNews(options).then((news) => {
             if (options && options.page === 0) {

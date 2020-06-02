@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsList from '../../organisms/NewsList/NewsList.connect';
 
-export default function HomePage(props) {
+const HomePage:React.FC = (props) => {
     return (
         <div>
             <NewsList />
@@ -9,3 +9,4 @@ export default function HomePage(props) {
     );
 }
 
+export default HomePage;
